@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql');
 const {db,queries,inqQuestions} = require('./db');
+const cTable = require('console.table');
 
 
 let connection = mysql.createConnection(db);
@@ -11,32 +12,22 @@ let connection = mysql.createConnection(db);
 
 
 async function promptQuestion(){
-    let answers = await inquirer.prompt(inqQuestions);
-    switch (answers.list){
-        case "View departments":
-            connection.query(queries.allDepartments,function(error,results,fields){
-                console.table(results);
-                // console.log(results);
-            });
-            promptQuestion();
-            break;
-        case "View roles":
-            connection.query(queries.allRoles,function(error,results,fields){
-                console.table(results);
-                // console.log(results);
-            });
-            promptQuestion();
-            break;
 
+    while (true) {
+        let answers = await inquirer.prompt(inqQuestions);
+        if (answers.list ==  "View departments"){
+            await connection.query(queries.allDepartments,function(error,results,fields){
+                    console.table(results);
+                    console.log('\n');
+                    // console.log(results);
+                });
+            continue;
+        }    
+        if (answers.list == 'Exit'){
+            break;
+        }
     }
 }
 
 
-// // connection.query(q4,function(error,results,fields){
-// //     // console.log(results);
-// //     console.table(results);
-// // })
-
 promptQuestion();
-
-
