@@ -26,7 +26,7 @@ questions = [
 //     questions:"inqQuestions"
 // }
 
-q1 = "select a.first_name, c.title, b.first_name as manager_name from employee a left join employee b on a.manager_id = b.id left join role c on a.role_id = c.id";
+// q1 = "select a.first_name, c.title, b.first_name as manager_name from employee a left join employee b on a.manager_id = b.id left join role c on a.role_id = c.id";
 
 module.exports = items = {
     db:db,
