@@ -11,12 +11,35 @@ queries = {
     allRoles        :   "select * from role"
 }
 
-questions = [
+questionsGeneral = [
     {
         type:"list",
         name:"list",
         choices:['View departments','View employees','View roles','Add department','Add role','Add employee','Exit'],
         message:"What do you want to do?"
+    }
+]
+
+questionsAddDepartment = [
+    {
+        type:"input",
+        name:"name",
+        message:"What is department name?"
+    }
+]
+
+questionsAddRole = [
+    {
+        type:"input",
+        name:"name",
+        message:"What is new role name?"
+    }
+]
+questionsAddEmployee = [
+    {
+        type:"input",
+        name:"name",
+        message:"Name?"
     }
 ]
 
@@ -31,5 +54,8 @@ questions = [
 module.exports = items = {
     db:db,
     queries:queries,
-    inqQuestions:questions
+    questionsGeneral:questionsGeneral,
+    questionsAddDepartment:questionsAddDepartment,
+    questionsAddEmployee:questionsAddEmployee,
+    questionsAddRole:questionsAddRole
 }
