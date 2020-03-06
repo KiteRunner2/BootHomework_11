@@ -15,7 +15,7 @@ questionsGeneral = [
     {
         type:"list",
         name:"list",
-        choices:['View departments','View employees','View roles','Add department','Add role','Add employee','Exit'],
+        choices:['View departments','View employees','View roles','Add department','Add role','Add employee','Update employee','EXIT'],
         message:"What do you want to do?"
     }
 ]
@@ -33,13 +33,61 @@ questionsAddRole = [
         type:"input",
         name:"name",
         message:"What is new role name?"
+    },
+    {
+    type:"number",
+    name:"salary",
+    message:"What is salary?"
+    },
+    {
+    type:"number",
+    name:"department_id",
+    message:"What is department id?"
     }
 ]
 questionsAddEmployee = [
     {
         type:"input",
-        name:"name",
-        message:"Name?"
+        name:"firstName",
+        message:"First name:"
+    },
+    {
+        type:"input",
+        name:"lastName",
+        message:"Last name:"
+    },
+    {
+        type:"number",
+        name:"role_id",
+        message:"Role id:"
+    },
+    {
+        type:"number",
+        name:"manager_id",
+        message:"Manager id:"
+    }
+]
+
+questionsUpdateEmployee = [
+    {
+        type:"input",
+        name:"firstName",
+        message:"First name:"
+    },
+    {
+        type:"input",
+        name:"lastName",
+        message:"Last name:"
+    },
+    {
+        type:"number",
+        name:"role_id",
+        message:"Role id:"
+    },
+    {
+        type:"number",
+        name:"manager_id",
+        message:"Manager id:"
     }
 ]
 
@@ -57,5 +105,6 @@ module.exports = items = {
     questionsGeneral:questionsGeneral,
     questionsAddDepartment:questionsAddDepartment,
     questionsAddEmployee:questionsAddEmployee,
-    questionsAddRole:questionsAddRole
+    questionsAddRole:questionsAddRole,
+    questionsUpdateEmployee:questionsUpdateEmployee
 }
