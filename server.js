@@ -11,12 +11,16 @@ const cTable = require('console.table');
 const connection = mysql.createConnection(db);
 
 function sendQuery(query){
+    // let result = [];
     connection.query(query,function(error,results,fields){
         console.log('---------------------------------');
         console.log('\n\n\n\n');            
         fields ? console.table(results):false;
+        // fields ? result = results:false;
         console.log('\n\n\n\n\n\n\n\n');
     })
+    // console.log(`result from sendQuery: ${result}`);
+    // return result;
 }
 
 async function promptQuestion(){
@@ -60,7 +64,20 @@ async function promptQuestion(){
             //to add query
         }
         if (answers.list == 'Update employee role'){
-
+            let query = 'select * from employee';
+            connection.query(query,function(error,results,fields){
+                // console.log('this is result:',results);
+                let answers = await inquirer.prompt(
+                    [
+                        {
+                            type:"list",
+                            name:"id",
+                            choices = results.map((value)=>value.firstName)
+                        }
+                    ]
+                )
+                console.log(answers);
+            })
         }
         if (answers.list == 'EXIT'){
                 process.exit(0);

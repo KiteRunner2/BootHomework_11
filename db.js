@@ -15,7 +15,7 @@ questionsGeneral = [
     {
         type:"list",
         name:"list",
-        choices:['View departments','View employees','View roles','Add department','Add role','Add employee','Update employee','EXIT'],
+        choices:['View departments','View employees','View roles','Add department','Add role','Add employee','Update employee role','EXIT'],
         message:"What do you want to do?"
     }
 ]
