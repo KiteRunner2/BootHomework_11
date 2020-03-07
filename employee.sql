@@ -26,7 +26,7 @@ CREATE TABLE `department` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES (1,'Network Planning'),(2,'Network Operations'),(3,'Network Performance'),(4,'Technology Business Unit');
+INSERT INTO `department` VALUES (1,'Network Planning'),(2,'Network Operations'),(3,'Network Performance'),(4,'Technology Business Unit'),(5,'Cleaning'),(6,'Coronavirus'),(7,'TEST'),(8,'TEST2'),(9,'TEST3'),(10,'TESTX'),(11,'lklk'),(12,'TEST56'),(13,'TEST57'),(14,''),(15,''),(16,''),(17,''),(18,'');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +53,7 @@ CREATE TABLE `employee` (
   `role_id` int(11) NOT NULL,
   `manager_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (1,'Przemek','Rudzki',7,NULL),(2,'Alex','Manny',8,1),(3,'Borg','Ganny',1,2),(4,'Olaf','Gustafson',10,1),(5,'Robert','Nixon',5,1);
+INSERT INTO `employee` VALUES (1,'Przemek','Rudzki',7,NULL),(2,'Alex','Manny',8,1),(3,'Borg','Ganny',1,2),(4,'Olaf','Gustafson',10,1),(5,'Robert','Nixon',5,1),(6,'Roman','Trylski',2,2),(7,'sdds','sdsd',4,2);
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +79,7 @@ CREATE TABLE `role` (
   `salary` float NOT NULL,
   `department_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `role` (
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (1,'CS Core Network Planner',10000,1),(2,'CS Core Network Operator',9500,2),(3,'Network Performance Expert',10000,3),(4,'Network Planning Manager',12000,1),(5,'Operations Director',15000,2),(6,'Network Performance Manager',13000,3),(7,'CTIO',20000,4),(8,'Network Planning Director',15000,1),(9,'Operations Director',15000,2),(10,'Network Performance Director',13000,3),(11,'Network Planning Specialist',8000,1),(12,'Network Operations Specialist',9000,2),(13,'Network Performance Specialist',9000,3);
+INSERT INTO `role` VALUES (1,'CS Core Network Planner',10000,1),(2,'CS Core Network Operator',9500,2),(3,'Network Performance Expert',10000,3),(4,'Network Planning Manager',12000,1),(5,'Operations Director',15000,2),(6,'Network Performance Manager',13000,3),(7,'CTIO',20000,4),(8,'Network Planning Director',15000,1),(9,'Operations Director',15000,2),(10,'Network Performance Director',13000,3),(11,'Network Planning Specialist',8000,1),(12,'Network Operations Specialist',9000,2),(13,'Network Performance Specialist',9000,3),(14,'garbage collector',545454,3);
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -101,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-05  0:04:51
+-- Dump completed on 2020-03-07 12:31:10

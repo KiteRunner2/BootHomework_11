@@ -91,20 +91,11 @@ questionsUpdateEmployee = [
     }
 ]
 
-// module.exports = {
-//     db:"db",
-//     queries:"queries",
-//     questions:"inqQuestions"
-// }
-
-// q1 = "select a.first_name, c.title, b.first_name as manager_name from employee a left join employee b on a.manager_id = b.id left join role c on a.role_id = c.id";
-
 module.exports = items = {
     db:db,
     queries:queries,
     questionsGeneral:questionsGeneral,
     questionsAddDepartment:questionsAddDepartment,
     questionsAddEmployee:questionsAddEmployee,
-    questionsAddRole:questionsAddRole,
-    questionsUpdateEmployee:questionsUpdateEmployee
+    questionsAddRole:questionsAddRole
 }
