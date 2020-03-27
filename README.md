@@ -1,4 +1,4 @@
-# BootHomework_11 - command line application for employee data management
+# Command line application for employee data management
 
 
 ## Technologies/Modules used
